@@ -2,12 +2,22 @@
 
 ## 1. System Design
 
-**a. Initial design**
+**a. Core User Actions**
+
+The app enables three primary user interactions:
+
+1. **Add and manage pet & owner information** — Users can enter and store basic details about themselves (availability, preferences) and their pet (name, type, age, special needs), which inform the daily schedule.
+
+2. **Create and edit pet care tasks** — Users can add tasks (e.g., feeding, walks, medication, enrichment) with properties like duration and priority level so the scheduler understands what needs to happen and how urgent each task is.
+
+3. **View today's scheduled plan** — The app generates and displays an optimized daily schedule that fits all tasks into the owner's available time, prioritizes based on importance, and explains why tasks were scheduled in that order.
+
+**b. Initial design**
 
 - Briefly describe your initial UML design.
 - What classes did you include, and what responsibilities did you assign to each?
 
-**b. Design changes**
+**c. Design changes**
 
 - Did your design change during implementation?
 - If yes, describe at least one change and why you made it.
