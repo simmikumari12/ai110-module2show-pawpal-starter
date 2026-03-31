@@ -128,51 +128,6 @@ The scheduler processes all pending (incomplete) tasks, sorts them by priority, 
 
 ---
 
-## 4. AI Collaboration (Phases 1-6)
-
-**a. How you used AI at each phase**
-
-1. **Phase 1 - Design:** Asked AI to identify core objects/responsibilities. AI suggested Task/Pet/Owner/Scheduler. ✓ Accepted
-2. **Phase 2 - Skeleton:** Asked AI to create dataclass structures. AI suggested dataclasses with default_factory. ✓ Accepted
-3. **Phase 3 - UI Integration:** Asked about st.session_state. AI recommended storing Owner directly. ✓ Accepted
-4. **Phase 4 - Algorithms:** 
-   - Sorting: AI suggested lambda key function for tuples ✓ Accepted
-   - Conflict detection: AI suggested dictionary lookup ✓ Accepted
-   - Filtering: AI suggested list comprehensions ✓ Accepted
-5. **Phase 5 - Tests:** AI drafted test structure and edge cases. ✓ Accepted structure
-6. **Phase 6 - Documentation:** AI helped structure README and consolidation. ✓ Accepted framework
-
-**Most helpful prompts:**
-- "How should Scheduler retrieve and organize tasks without tight coupling?"
-- "What's the Pythonic way to sort by HH:MM format?"
-- "What edge cases need testing for a pet scheduler?"
-- "How should I structure system documentation?"
-
-**b. Judgment and verification**
-
-**Instance 1: Greedy Scheduling (Phase 2)**
-- AI suggested: Greedy approach
-- My verification: Wrote tests for priority ordering, constraints, edge cases
-- Result: ✓ Tests passed; confirmed correctness
-
-**Instance 2: Session State (Phase 3)**
-- AI suggested: Store Owner object directly in st.session_state
-- My verification: Manual testing with owner creation, pet addition, page refresh
-- Result: ✓ Verified; data persisted correctly
-
-**Instance 3: Recurring Task Creation (Phase 4)**
-- AI suggested: Create new Task instances preserving attributes
-- My verification: Wrote tests for attribute preservation and is_complete=False
-- Result: ✓ Tests passed; logic confirmed
-
-**When I modified AI suggestions:**
-1. **filter_tasks()**: Changed from set-based to list-based (Task objects aren't hashable)
-2. **Conflict detection scope**: Chose exact time matching over complex overlap detection (sufficient for current phase)
-
-**Summary:** AI excellent for architecture/algorithms; human verification through testing adds confidence before committing.
-
----
-
 ## 5. Testing and Verification (Phase 5)
 
 **a. Test Coverage Expansion**

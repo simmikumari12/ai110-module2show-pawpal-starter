@@ -198,5 +198,5 @@ This systematic approach ensures that business logic is solid before UI work, an
 
 **Built with:** Python 3.11 · Streamlit · pytest · Dataclasses
 
-**Author:** [Your Name]  
-**Status:** Phase 6 Complete ✓
+**Author:** Simmi Kumari
+
