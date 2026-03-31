@@ -14,8 +14,19 @@ The app enables three primary user interactions:
 
 **b. Initial design**
 
-- Briefly describe your initial UML design.
-- What classes did you include, and what responsibilities did you assign to each?
+The initial UML design includes four core classes:
+
+1. **Task** — Represents a single pet care activity with attributes (description, duration_min, priority, frequency, is_complete) and methods to mark tasks complete/incomplete. This keeps task state isolated and simple.
+
+2. **Pet** — Represents a single pet, storing pet details (name, type, age, special_needs) and managing a list of tasks. Methods include add_task(), get_tasks(), and complete_task() to manage the pet's care schedule.
+
+3. **Owner** — Represents the pet owner with attributes for name, availability_hours (how much time they have per day), preferences, and a list of pets. Methods include add_pet(), get_pets(), and get_all_tasks() to provide access to all pet information.
+
+4. **Scheduler** — The core orchestration engine that receives an Owner instance and generates optimized daily schedules. Key methods include generate_schedule() (which retrieves all tasks and prioritizes them) and organize_tasks_by_priority() (which sorts tasks by urgency).
+
+The relationships are: Owner has multiple Pets, each Pet contains multiple Tasks, and the Scheduler manages access to an Owner's data to produce a feasible daily plan.
+
+Responsibilities: Task handles its own state (complete/incomplete), Pet manages its tasks, Owner aggregates pets, and Scheduler orchestrates the planning logic.
 
 **c. Design changes**
 
